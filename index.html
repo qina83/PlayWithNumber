@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+	<script
+		src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+	<script src="card.js"></script>
+	<script src="timer.js"></script>
+	<script src="engine.js"></script>
+	<script src="stage.js"></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-camera wasd-controls-enabled="false">
+			<a-cursor fuse="true" fuse-timeout="500"></a-cursor>
+		</a-camera>
+		<a-entity>
+			<a-text id="score" align="center" position="0 3 -2" width="5" color="white" value="Score" visible="false"> </a-text>
+			<a-text id="lives" align="center" position="0 2.7 -2" width="5" color="white" value="Lives" visible="false"> </a-text>
+			<a-text id="question" align="center" position="0 2.3 -2" width="5" color="white" value="Question" visible="false"> </a-text>
+			<a-text id="time" align="center" position="0 2 -2" width="5" color="white" value="Time" visible="false"> </a-text>
+		</a-entity>
+		<a-entity environment="preset: default;"></a-entity>
+	</a-scene>
+</body>
+
+</html>
