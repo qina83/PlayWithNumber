@@ -20,7 +20,7 @@ const calculateXPosition = (totalItems, index) => {
 
 const renderTimer = () => {
     const tmr = stringToHtml(
-        `<a-timer duration="10"/>`
+        `<a-timer position="0 1 -2" width="3" endTime="${endTime.getTime()}"/>`
     );
     let exTimer = document.querySelector('a-timer');
     console.log("exTimer", exTimer);
@@ -91,7 +91,6 @@ const restartQuiz = () => {
     document.querySelector('#score').setAttribute("visible", "true");
     document.querySelector('#lives').setAttribute("visible", "true");
     document.querySelector('#init').remove();
-    renderTimer();
     resetQuiz();
     nextLevel();
 
@@ -103,11 +102,11 @@ const nextLevel = () => {
         quizEnded();
         clearInterval(refInterval);
     }
-    else {
-        renderTimer();
+    else {        
         refreshScore(score);
         generateQuiz();
         startQuiz();
+        renderTimer();
     }
 }
 
