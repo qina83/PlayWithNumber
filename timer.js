@@ -10,9 +10,9 @@ AFRAME.registerComponent('timer', {
     },
     tick: function (time, timeDelta) {
         this.leftTime = this.endTime - new Date().getTime();
-        let durationPerc = this.leftTime / this.duration;
+        const durationPerc = this.leftTime / this.duration;
         let innerWidth = this.width * durationPerc;
-        let xPosition = -(this.width - innerWidth) / 2;
+        const xPosition = -(this.width - innerWidth) / 2;
 
         let color = "lime";
         if (durationPerc < 0.7) color = "yellow";
