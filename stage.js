@@ -55,9 +55,7 @@ const refreshAnswers = (values) => {
 }
 
 refreshLife = (lives) => {
-    if (lives === 1) document.querySelector('#lives').setAttribute("value", `Hai ${lives} vita`);
-    else
-        document.querySelector('#lives').setAttribute("value", `Hai ${lives} vite`)
+   document.querySelector('#lives').setAttribute("value", lives);
 }
 
 refreshScore = (score) => {
@@ -120,7 +118,7 @@ const init = () => {
 }
 
 window.addEventListener("load", function (event) {
-    renderStartButton();
+   // renderStartButton();
 });
 
 window.application = {
